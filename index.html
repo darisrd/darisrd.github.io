@@ -1,122 +1,139 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Foi Dash!</title>
-	
-	<!-- Standardised web app manifest -->
-	<link rel="manifest" href="appmanifest.json" />
-	
-	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
-	<meta name="HandheldFriendly" content="true" />
-	
-	<!-- Chrome for Android web app tags -->
-	<meta name="mobile-web-app-capable" content="yes" />
-	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-pink.css">
+    <title>Links website</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            background: url("https://static.vecteezy.com/system/resources/previews/004/141/314/original/blue-sky-wallpaper-clear-air-heavenly-background-illustration-vector.jpg");
+            /* The image used for background */
+        }
 
-    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
-	<style type="text/css">
-		* {
-			padding: 0;
-			margin: 0;
-		}
-		html, body {
-			background: #000;
-			color: #fff;
-			overflow: hidden;
-			touch-action: none;
-			-ms-touch-action: none;
-		}
-		canvas {
-			touch-action-delay: none;
-			touch-action: none;
-			-ms-touch-action: none;
-		}
+        .container {
+            width: 100%;
+            height: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            jusify-content: center;
+            align-items: center;
+        }
+
+        .links-container a {
+            width: 80%;
+        }
+
+        .w3-theme-l1:hover {
+            background-color: #f279a1 !important;
+        }
+
+        .margin-top-2 {
+            margin-top: 32px;
+        }
+
+        .bottom {
+            width: 100%;
+            text-align: center;
+            width: auto;
+            font-weight: bolder;
+        }
+
+        .bottom span {
+            color: #ed4d82;
+        }
+
+        .bottom svg {
+            stroke: #ed4d82;
+            fill: #ed4d82;
+        }
+
+        @media (min-width: 768px) {
+            .link {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
     </style>
-	
+</head>
 
-</head> 
- 
-<body> 
-	<div id="fb-root"></div>
-	
-	<script>
-	// Issue a warning if trying to preview an exported project on disk.
-	(function(){
-		// Check for running exported on file protocol
-		if (window.location.protocol.substr(0, 4) === "file")
-		{
-			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
-		}
-	})();
-	</script>
-	
-	<!-- The canvas must be inside a div called c2canvasdiv -->
-	<div id="c2canvasdiv">
-	
-		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
-		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
-		<canvas id="c2canvas" width="854" height="480">
-			<!-- This text is displayed if the visitor's browser does not support HTML5.
-			You can change it, but it is a good idea to link to a description of a browser
-			and provide some links to download some popular HTML5-compatible browsers. -->
-			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
-			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
-			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
-			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
-			<a href="http://www.apple.com/safari/download/">Apple Safari</a><br/>
-			<a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br/></h1>
-		</canvas>
-		
-	</div>
-	
-	<!-- Pages load faster with scripts at the bottom -->
-	
-	<!-- Construct 2 exported games require jQuery. -->
-	<script src="jquery-2.1.1.min.js"></script>
+<body>
+    <!-- Content container -->
+    <div class="container">
 
+        <!-- Image and name container. Change to your pictue here. -->
+        <div style="text-align: center">
+            <img src="https://media-exp1.licdn.com/dms/image/D4D03AQH9lyQJKVG3nA/profile-displayphoto-shrink_200_200/0/1664594761106?e=1674691200&v=beta&t=oPW4qCsfvtQcDZUsbOl1KbFDTOnpC1SN_BlaljDhOCo" class="w3-margin" alt="image"
+                width="150px" height="150px" style="border-radius: 50%;">
+            <p><span class="name w3-padding w3-pink w3-round" style="font-weight: bolder;">Hi, I'm Ris!</span></p>
+            <p style="font-weight: bolder;">Check out my links!</p>
+        </div>
 
-	
-    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
-    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
-	<script src="c2runtime.js"></script>
+        <!-- Links section 1. Replace the # inside of the "" with your links. -->
+        <h4 class="margin-top-2" style="text-align: center;">MY SOCIAL NETWORKS</h4>
+        <div class="links-container">
+            <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Facebook</a>
+            <br>
+            <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Instagram</a>
+            <br>
+            <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Twitter</a>
+            <br>
+            <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Github</a>
+        </div>
 
+        <!-- Links section 2. Replace the # inside of the "" with your links. -->
+        <h4 class="margin-top-2" style="text-align: center;">MY CV</h4>
+        <div class="links-container">
+            <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Curriculum
+                Vitae</a>
+        </div>
+
+        <!-- Links section 2. Replace the # inside of the "" with your links. -->
+        <h4 class="margin-top-2" style="text-align: center;">OTHERS</h4>
+        <div class="links-container">
+            <a href="https://darisrd.github.io/foi" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Game!!!</a>
+        </div>
+
+        
+
+        <!-- Bottom section 3 -->
+        <div class="bottom margin-top-2 w3-padding w3-round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-heart">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+            </svg>
+            <span style="vertical-align: 7px;"> 2021 - Jane Doe</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-heart">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+            </svg>
+        </div>
+
+    </div>
     <script>
-		// Size the canvas to fill the browser viewport.
-		jQuery(window).resize(function() {
-			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
-		});
-		
-		// Start the Construct 2 project running on window load.
-		jQuery(document).ready(function ()
-		{			
-			// Create new runtime using the c2canvas
-			cr_createRuntime("c2canvas");
-		});
-		
-		// Pause and resume on page becoming visible/invisible
-		function onVisibilityChanged() {
-			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
-				cr_setSuspended(true);
-			else
-				cr_setSuspended(false);
-		};
-		
-		document.addEventListener("visibilitychange", onVisibilityChanged, false);
-		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
-		
-		if (navigator.serviceWorker && navigator.serviceWorker.register)
-		{
-			// Register an empty service worker to trigger web app install banners.
-			navigator.serviceWorker.register("sw.js", { scope: "./" });
-		}
+        feather.replace()
     </script>
-</body> 
-</html> 
+</body>
+
+</html>
